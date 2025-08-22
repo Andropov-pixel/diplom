@@ -99,7 +99,7 @@
 1. Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/Chipchilinich/task_tracker.git
+git clone https://github.com/Andropov-pixel/diplom
 ````
 
 3. Установите зависимости:

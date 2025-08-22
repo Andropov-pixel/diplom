@@ -1,0 +1,140 @@
+[
+  {
+    "model": "employee.employee",
+    "pk": 1,
+    "fields": {
+      "fio": "ivan",
+      "employee_position": null
+    }
+  },
+  {
+    "model": "employee.employee",
+    "pk": 2,
+    "fields": {
+      "fio": "fedor",
+      "employee_position": null
+    }
+  },
+  {
+    "model": "employee.employee",
+    "pk": 3,
+    "fields": {
+      "fio": "petr",
+      "employee_position": "developer"
+    }
+  },
+  {
+    "model": "employee.employee",
+    "pk": 4,
+    "fields": {
+      "fio": "sergey",
+      "employee_position": "manager"
+    }
+  },
+  {
+    "model": "employee.employee",
+    "pk": 5,
+    "fields": {
+      "fio": "max",
+      "employee_position": "manager"
+    }
+  },
+  {
+    "model": "tracker.tracker",
+    "pk": 1,
+    "fields": {
+      "title": "task1",
+      "related_tracker": null,
+      "time": null,
+      "status": "active",
+      "employees": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "tracker.tracker",
+    "pk": 2,
+    "fields": {
+      "title": "task2",
+      "related_tracker": 1,
+      "time": null,
+      "status": "active",
+      "employees": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "tracker.tracker",
+    "pk": 3,
+    "fields": {
+      "title": "task3",
+      "related_tracker": 1,
+      "time": null,
+      "status": "active",
+      "employees": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "tracker.tracker",
+    "pk": 5,
+    "fields": {
+      "title": "task 5",
+      "related_tracker": 1,
+      "time": null,
+      "status": "active",
+      "employees": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "tracker.tracker",
+    "pk": 6,
+    "fields": {
+      "title": "task 5",
+      "related_tracker": 2,
+      "time": null,
+      "status": "active",
+      "employees": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "tracker.tracker",
+    "pk": 7,
+    "fields": {
+      "title": "task 7",
+      "related_tracker": 2,
+      "time": null,
+      "status": "active",
+      "employees": []
+    }
+  },
+  {
+    "model": "tracker.tracker",
+    "pk": 8,
+    "fields": {
+      "title": "task 8",
+      "related_tracker": null,
+      "time": null,
+      "status": "active",
+      "employees": []
+    }
+  },
+  {
+    "model": "tracker.tracker",
+    "pk": 9,
+    "fields": {
+      "title": "task 8",
+      "related_tracker": null,
+      "time": null,
+      "status": "active",
+      "employees": []
+    }
+  }
+]

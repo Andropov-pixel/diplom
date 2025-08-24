@@ -1,19 +1,12 @@
-from django.conf.urls.static import static
+from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from .views import TrackerViewSet
 
-from config import settings
-from tracker.apps import TrackerConfig
-from tracker.views import TrackerViewset
-
-
-app_name = TrackerConfig.name
+app_name = 'tracker'
 
 router = DefaultRouter()
-router.register("", TrackerViewset, basename="tracker")
+router.register(r'tracker', TrackerViewSet)  # ← ПРОВЕРЬТЕ ЧТО НЕТ ЛИШНИХ СКОБОК
 
-urlpatterns = []
-
-urlpatterns += router.urls
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns = [
+    path('', include(router.urls)),  # ← ПРАВИЛЬНЫЙ СИНТАКСИС
+]

@@ -1,0 +1,11 @@
+# 1. Получить токен
+curl -X POST http://127.0.0.1:8000/api/token/ \
+  -H "Content-Type: application/json" \
+  -d '{"username": "admin", "password": "admin123"}'
+
+# 2. Получить список привычек (с токеном)
+curl -X GET http://127.0.0.1:8000/api/habits/ \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+
+# 3. Публичные привычки (без токена)
+curl -X GET http://127.0.0.1:8000/api/habits/public/

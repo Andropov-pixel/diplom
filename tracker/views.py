@@ -2,12 +2,19 @@ from rest_framework import viewsets
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter
 from rest_framework.response import Response
+from rest_framework import serializers
 
+from employee.serializer import EmployeeSerializer
+from tracker.models import Tracker
+from .serializer import TrackerSerializer
 from employee.models import Employee
 from tracker.filters import TrackerFilter
 from tracker.models import Tracker
 from tracker.serializer import TrackerSerializer
 
+class TrackerViewSet(viewsets.ModelViewSet):
+    queryset = Tracker.objects.all()
+    serializer_class = TrackerSerializer
 
 class TrackerViewset(viewsets.ModelViewSet):
     """ViewSet для модели TRACKER"""
